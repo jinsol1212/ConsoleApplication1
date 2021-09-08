@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 #include<cstdlib>
 #include<ctime>
 
@@ -26,7 +26,7 @@ if (life == 0) {
 	
 }
 }
-double Game::Damage() {
+double Game::Damage() {s
 double damaged = 0;
 
 if (energy > 0) {
@@ -66,4 +66,64 @@ while (Game::life >0) {
 }
 
 return 0;
+}*/
+
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <Windows.h>
+using namespace std;
+
+class Circle {
+public:
+	int x, y;
+	int radius;
+	Circle(): x(0), y(0), radius(0) {}
+	void print() {
+		cout << "반지름: " << radius << " @(" << x << ", " << y << ")" << endl;
+	}
+	void draw() {
+		int r = radius / 2;
+		HDC hdc = GetWindowDC(GetForegroundWindow());
+		Ellipse(hdc, x - r, y - r, x + r, y + r);
+	}
+};
+int main() {
+	srand(time(NULL));
+	Circle abjArray[10];
+	for (Circle& c: abjArray) {
+		c.x = rand() % 500;
+		c.y = rand() % 300;
+		c.radius = rand() % 100;
+	}
+	for (Circle& c : abjArray) {
+		//c.print();
+		c.draw();
+		return 0;
+	}
 }
+
+
+/*#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+	vector<int> vec;
+
+	vec.push_back(10);
+	vec.push_back(20);
+	vec.push_back(30);
+
+	for (int i = 0; i < vec.size(); i++) {
+		cout << i << "번째 원소: " << vec[i] << endl;
+	}
+	vec.pop_back();
+
+	cout << endl;
+	for (int i = 0; i < vec.size(); i++) {
+		cout << i << "번째 원소" << vec[i] << endl;
+	}
+	return 0;
+}*/
