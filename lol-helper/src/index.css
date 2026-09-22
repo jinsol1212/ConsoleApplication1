@@ -1,0 +1,63 @@
+:root {
+  --ink: #0b1512;
+  --ink-2: #12221c;
+  --moss: #1a3a2f;
+  --teal: #2dd4a8;
+  --teal-dim: #1a9e7a;
+  --gold: #e2b85a;
+  --gold-soft: #c9a14a;
+  --fog: #c8d9d0;
+  --fog-dim: #8aa396;
+  --danger: #e85d4c;
+  --panel: rgba(14, 28, 22, 0.82);
+  --line: rgba(45, 212, 168, 0.18);
+  --font-display: 'Black Han Sans', 'Arial Black', sans-serif;
+  --font-body: 'IBM Plex Sans KR', 'Noto Sans KR', sans-serif;
+  color: var(--fog);
+  background: var(--ink);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.55;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  min-width: 320px;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+code {
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  font-size: 0.9em;
+  color: var(--gold);
+}
