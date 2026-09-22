@@ -27,3 +27,6 @@ npm run dev
 npm run build
 npm run preview
 ```
+
+`npm run dev` / `npm run preview` 모두 Vite 프록시(`/api/meraki`)를 씁니다.  
+순수 정적 호스팅만 쓰면 Meraki CORS 때문에 전투 계산이 깨지니, 같은 프록시를 서버에 붙이세요.
