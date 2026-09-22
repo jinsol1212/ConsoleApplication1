@@ -39,8 +39,8 @@ export type MerakiChampion = {
   abilities: Record<'P' | 'Q' | 'W' | 'E' | 'R', MerakiAbility[]>
 }
 
-const MERAKI_BASE =
-  'https://cdn.merakianalytics.com/riot/lol/resources/latest/en-US'
+/** Vite dev/preview proxy — Meraki CDN blocks browser CORS */
+const MERAKI_BASE = '/api/meraki'
 
 export type MerakiItemStat = {
   flat: number
